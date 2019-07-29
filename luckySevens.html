@@ -15,14 +15,38 @@
   <div class="container">
     <h1 class="py-4">Lucky Sevens</h1>
     <div class="py-1">
-    <label>Starting Bet: $</label>
-    <input id="bet" type="text" placeholder="0.00" name="bet">
+      <form action=""></form>
+      <label>Starting Bet: $</label>
+      <input id="bet" type="number" placeholder="0.00" name="quantity" value="0">
     </div>
     <br>
-    <button id="play" class="btn btn-primary">Play</button>
+    <button id="play" class="btn btn-primary mb-5" onclick="playGame()">Play</button>
+    <table class="table table-striped table-bordered" id="table1" style="display:none">
+      <thead>
+          <th colspan="2">Results</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starting Bet</td>
+          <td id="initialBet"></td>
+        </tr>
+        <tr>
+          <td>Total Rolls Before Going Broke</td>
+          <td id="totalRollCount"></td>
+        </tr>
+        <tr>
+          <td>Highest Amount Won</td>
+          <td id="maxWon"></td>
+        </tr>
+        <tr>
+          <td>Roll Count at Highest Amount Won</td>
+          <td id="rollCountMax"></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  </div>
-  </div>
+
+  <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>
